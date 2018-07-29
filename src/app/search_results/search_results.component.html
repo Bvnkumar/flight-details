@@ -1,7 +1,35 @@
 <header></header>
 <div class="container">
-	<div *ngIf="filtered_flight.length;else other_content">
+	<div class="row">
+		<div class="col-sm-2">
+			
+		</div>
+		<div class="col-sm-8">
 		<h3>Here is the reults of your search <i><u>{{term}}</u></i></h3>
+			<div [ngClass]="{'results':true,'mainc':true,'headerc':true,'mainresults':true}">
+				<span class="float-left">Flight Name</span>
+				<span class="float-right">Number</span>
+			</div>
+			<div class="border-box">
+				<div ng-if="filtered_flight.length" *ngFor="let flight of filtered_flight" >
+					<div float-name>{{flight.name}}</div>
+					<div class="float-link"><a routerLink="/flight/air123" title="click for more info">{{flight.flight_no}}</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			
+		</div>
+	</div>
+
+</div>
+
+
+
+
+<!-- <div class="container">
+	<div *ngIf="filtered_flight.length;else other_content">
+		
 		<div class="">
 			<div class="row" [ngClass]="{'results':true,'mainc':true,'headerc':true,'mainresults':true}">
 				<div class="col-md-6 col-xs-5 col-sm-5" style="display:inline">Flight Name</div>
@@ -44,4 +72,4 @@
 
 	<div>
 		<button [ngClass]="{'pull-right' :true,'btn':true,'mainc':true,'headerc':true,'m-t-10':true}" routerLink="/search">Go to back</button></div>
-</div>
+</div> -->

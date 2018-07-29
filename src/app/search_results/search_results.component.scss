@@ -40,3 +40,29 @@ margin-right: 10px;
     margin-left: 1px;
     margin-right: 1px;
 }
+.float-left{
+  float:left;
+  position: relative;
+    left: 10px;
+}
+.float-right{
+  float:right;
+  position: relative;
+    right: 10px;
+}
+
+.border-box{
+  border:2px solid #eee;
+  border-radius:4px;
+  padding: 10px;
+}
+.float-link{
+  position: absolute;
+    right: 30px;
+    bottom: 10px; 
+}
+.flight-details{
+    border: 2px solid #eee;
+    padding: 10px;
+    border-radius: 4px;
+}

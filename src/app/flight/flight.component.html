@@ -1,11 +1,60 @@
 <header></header>
-
-<div class="container-fluid">
-
-	<div class="well well-sm m-t-15" [ngClass]="{'sideheaders':true}">
+<div class="container">
+<div class="row">
+		<div class="col-sm-2">
+			
+		</div>
+		<div class="col-sm-8">
+		<div class="well well-sm m-t-15" [ngClass]="{'sideheaders':true}">
 		<span [ngClass]="">Flight Details</span>
+		</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<img src="{{filtered_flight.image}}" width="100%" height="50%">
+				</div>
+				<div class="col-sm-6">
+					<span [ngClass]="{detailslist:true,'f-s-20':true}">Name:</span>
+					<span [ngClass]="{'pull-right':true,'f-s-20':true}">{{filtered_flight.name}}</span><br>
+					<span [ngClass]="{detailslist:true,'f-s-20':true}">number:</span>
+					<span [ngClass]="{'pull-right':true,'f-s-20':true}">{{filtered_flight.flight_no}}</span><br>
+					<span [ngClass]="{detailslist:true,'f-s-20':true}">Destination:</span>
+					<span [ngClass]="{'pull-right':true,'f-s-20':true}">{{filtered_flight.destination}}</span>
+				</div>
+			</div>
+			<div class="well well-sm m-t-15" [ngClass]="{'sideheaders':true}">
+				<span [ngClass]="">Passenger Names</span>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div *ngFor="let passenger of filtered_passenger" class="module">
+						<div  [ngClass]="{'m-b-6':true,'module':true}" class="">
+							<li [ngClass]=""><a routerLink="/passenger/{{passenger.name}}" title="click for more info">{{passenger.name|uppercase}}</a></li>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+				
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			
+		</div>
 	</div>
-	<div class="row">
+	</div>
+
+
+
+
+
+
+
+<!-- <div class="container-fluid"> -->
+
+	<!-- <div class="well well-sm m-t-15" [ngClass]="{'sideheaders':true}">
+		<span [ngClass]="">Flight Details</span>
+	</div> -->
+	<!-- <div class="row">
 		<div class="col-md-6 col-xs-12 col-sm-6" style="display:inline-block">
 			<img src="{{filtered_flight.image}}" width="100%" height="50%">
 		</div>
@@ -18,8 +67,8 @@
 			<span [ngClass]="{'pull-right':true,'f-s-20':true}">{{filtered_flight.destination}}</span>
 		</div>
 
-	</div>
-  <hr>
+	</div> -->
+  <!-- <hr>
   <div class="well well-sm m-t-15" [ngClass]="{'sideheaders':true}">
 		<span [ngClass]="">Passenger Names</span>
 	</div>
@@ -28,7 +77,7 @@
 		<div  [ngClass]="{'m-b-6':true,'module':true}" class="">
 			<li [ngClass]=""><a routerLink="/passenger/{{passenger.name}}" title="click for more info">{{passenger.name|uppercase}}</a></li>
 		</div>
-	</div>
+	</div> -->
 <div>
-		<button [ngClass]="{'pull-right' :true,'btn':true,'mainc':true,'headerc':true,'m-t-10':true}" (click)="goback()">Go to back</button></div>
+		<button [ngClass]="{'pull-right' :true,'btn':true,'mainc':true,'headerc':true,'m-t-10':true}" (click)="goback()">Go to back</button>
 </div>
