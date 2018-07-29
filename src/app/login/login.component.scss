@@ -1,0 +1,56 @@
+// $header-color:#00b9f5;
+.m-t-90{
+  margin-top: 90px;
+  
+}
+.m-l-90{
+      margin-left: 90px;
+@media only screen and(max-width:500px){
+    margin-left: 70px;
+  }
+}
+
+.alertClass{
+  height: 40px;
+    padding: 11px;
+    padding-left: 25px;
+    font-size: 12px;
+}
+.alertClassPass{
+  height: 40px;
+    padding: 11px;
+    padding-left: 25px;
+        font-size: 12px;
+
+}
+input.ng-valid[required]  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+input.ng-dirty.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+.red-c{
+  color:  red;
+}
+
+@keyframes buttonEffect{
+  from{color:red}
+  to{color: green}
+}
+.headerc{
+  background-color: #00b9f5
+}
+.whitec{
+  color: white
+}
+.b-img{
+ min-height:-webkit-fill-available;
+ background-size:cover;
+ background-repeat: no-repeat;
+ overflow-y: hidden;
+ overflow-x: hidden;
+ -webkit-background-size: cover;
+ display: block
+ 
+ }

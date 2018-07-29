@@ -1,0 +1,43 @@
+    
+// $header-color:#00b9f5;
+// $main-text:white;
+    
+    .details li {
+      list-style: none;
+    }
+    li {
+        margin-bottom:10px;
+        
+    }
+    .p-r-10{
+      padding-right: 10px
+    }
+
+
+@media only screen and (max-width: 500px)  { 
+      .m-r-25-m{
+margin-left: 25px;
+
+      }
+          
+    }
+
+
+.headerc{
+  background-color: #00b9f5;
+}
+.mainc{
+  color: white;
+}
+.detailslist{
+font-weight: bold;
+width: 50%
+}
+
+.goback{
+      margin-bottom: 14px;
+      margin-left: 16px;
+}
+.m-b-14{
+  margin-bottom: 14px;
+}

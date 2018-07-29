@@ -1,0 +1,47 @@
+<header></header>
+<div class="container">
+	<div *ngIf="filtered_flight.length;else other_content">
+		<h3>Here is the reults of your search <i><u>{{term}}</u></i></h3>
+		<div class="">
+			<div class="row" [ngClass]="{'results':true,'mainc':true,'headerc':true,'mainresults':true}">
+				<div class="col-md-6 col-xs-5 col-sm-5" style="display:inline">Flight Name</div>
+				<div class="col-md-offset-5 col-xs-offset-5 col-sm-offset-5" style="display:inline;">Number</div>
+			</div>
+
+		</div>
+
+
+		<div *ngFor="let flight of filtered_flight">
+			<div class="well well-sm" [ngClass]="{'m-b-5':true}">
+				<div class="row">
+					<div class="col-md-6 col-xs-5 col-sm-5" style="display:inline">{{flight.name}}</div>
+					<div class="col-md-offset-5 col-xs-offset-5 col-sm-offset-5" style="display:inline;">
+						<a routerLink="/flight/air123" title="click for more info">{{flight.flight_no}}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ng-template #other_content>
+
+		<h3>No flights found to <i><u>{{term}}</u></i>, please select from below results.</h3>
+		<div class="row" [ngClass]="{'results':true,'mainc':true,'headerc':true,'mainresults':true}">
+			<div class="col-md-6 col-xs-5 col-sm-5" style="display:inline">Flight Name</div>
+			<div class="col-md-offset-5 col-xs-offset-5 col-sm-offset-5" style="display:inline;">Number</div>
+		</div>
+		<div *ngFor="let flight of total_flights">
+			<div class="well well-sm" [ngClass]="{'m-b-5':true}">
+				<div class="row">
+					<div class="col-md-6 col-xs-5 col-sm-5" style="display:inline">{{flight.name}}</div>
+					<div class="col-md-offset-5 col-xs-offset-5 col-sm-offset-5" style="display:inline;">
+						<a routerLink="/flight/{{flight.flight_no}}" title="click for more info">{{flight.flight_no}}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</ng-template>
+
+	<div>
+		<button [ngClass]="{'pull-right' :true,'btn':true,'mainc':true,'headerc':true,'m-t-10':true}" routerLink="/search">Go to back</button></div>
+</div>
